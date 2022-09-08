@@ -2,8 +2,7 @@ pipeline {
 	agent {
 		node {
 			label 'slave1'
-			customWorkspace "/data/pipeline"
-}
+			}
 	}
 	stages { 
 			stage ('install-apache') {
