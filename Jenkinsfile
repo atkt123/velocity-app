@@ -1,25 +1,25 @@
 pipeline {
 	agent {
 		label {
-	label 'slave1'
-	customWorkspace "/data/pipeline"
+			label 'slave1'
+			customWorkspace "/data/pipeline"
 }
 	}
 	stages { 
 			stage ('install-apache') {
 			steps {
-				sh "yum install httpd -y"
+				sh "sudo yum install httpd -y"
  			}
 		}
 		stage ('deploy-index') {
 			steps {
-				sh "cp -r index.html /var/www/html"
-				sh "chmod -R 777 /var/www/html"
+				sh "sudo cp -r index.html /var/www/html"
+				sh "sudo chmod -R 777 /var/www/html"
  			}
 		}
 		stage ('restart-apache') {
 			steps {
-				sh "service httpd restart"
+				sh "sudo service httpd restart"
  			}
 		}
 	}
