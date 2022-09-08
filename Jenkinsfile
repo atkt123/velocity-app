@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage ('restart-apache') {
 			steps {
-				sh "service https restart"
+				sh "service httpd restart"
  			}
 		}
 	}
