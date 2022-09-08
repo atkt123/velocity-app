@@ -6,11 +6,11 @@ pipeline {
 }
 	}
 	stages { 
-			/* stage ('install-apache') {
+			stage ('install-apache') {
 			steps {
 				sh "yum install httpd -y"
  			}
-		}*/
+		}
 		stage ('deploy-index') {
 			steps {
 				sh "cp -r index.html /var/www/html"
