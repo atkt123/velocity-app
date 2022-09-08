@@ -3,7 +3,7 @@ pipeline {
 	label 'built-in'
 }
 	stages { 
-	stage ('stage-1) {
+	stage ('stage-1') {
 	steps {
 	echo "welcome to velocity"
  	}
